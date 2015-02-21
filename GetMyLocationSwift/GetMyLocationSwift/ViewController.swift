@@ -24,31 +24,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-            
-            
-            
             CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
-                
-                
-                
+
                 if (error != nil) {
-                    
-                    
-                    
+             
                     println("Error:" + error.localizedDescription)
-                    
                     return
-                    
-                    
-                    
                 }
-                
-                
-                
                 if placemarks.count > 0 {
                     
                     
@@ -64,15 +49,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                     println("Error with data")
                     
                 }
-                
-                
-                
-                
-                
             })
-            
-            
-            
         }
     }
     
@@ -90,7 +67,4 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         println("Error: " + error.localizedDescription)
         
     }
-
-
 }
-
